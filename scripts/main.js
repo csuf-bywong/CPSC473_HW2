@@ -1,7 +1,7 @@
 var DETAIL_IMAGE_SELECTOR = "[data-image-role=\"target\"]";
 var DETAIL_TITLE_SELECTOR = "[data-image-role=\"title\"]";
 var THUMBNAIL_LINK_SELECTOR = "[data-image-role=\"trigger\"]";
-var slideIndex = 1;
+//var slideIndex = 1;
 
 function setDetails(imageUrl, titleText) {
   "use strict";
@@ -42,16 +42,17 @@ function getThumbnailsArray() {
   return thumbnailArray;
 }
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+// help from w3schools.com/w3css_slideshow.asp
+// my attempt to give the buttons functionality but it didn't work
+//function plusDivs(n) {
+//  showDivs(slideIndex += n);
+//}
 
-function showDivs(n) {
-  plusDivs(n);
-  var thumbnailArray = getThumbnailsArray();
-  if (n > thumbnailArray.length) {slideIndex = 1;}
-  if (n < thumbnailArray.length) {slideIndex = thumbnailArray.length;}
-}
+//function showDivs(n) {
+//  var x = document.getElementsByClassName("thumbnail-image");
+//  if (n > x.length) {slideIndex = 1;}
+//  if (n < x.length) {slideIndex = x.length;}
+//}
 
 function initializeEvents() {
   "use strict";
